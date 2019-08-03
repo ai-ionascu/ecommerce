@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block page_content %}
+<div class="container-fluid">
+    <div class="row">
+        {% for item in cart_items %}
+        
+        <div class="col-10 offset-1 offset-sm-0 col-sm-6 col-md-4 card mx-2">
+            <div class="card-body">
+                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+                <h3>{{ item.product.name }}</h3>
+                <p class='product-description'>{{ item.product.description }}</p>
+                <p>{{ item.product.price }}</p>
+                <form method='post' action="{% url 'adjust_cart' item.id %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="" for="new-ammount" class='sr-only'>New Qty</label>
+                        <div class="input-group">
+                            <p class="input-group mb-3">Qty: 
+                                <span class="input-group mb3">{{item.quantity}}</span>
+                            </p>
+                            <input type="number" name="quantity" min="0" max="999" class="form-control">
+                        </div>
+                    </div>
+                    <button type='submit' class="btn btn-primary"><i class="far fa-edit" aria-hidden='True'> Add More</i></button>
+                </form>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+    <br>
+    <div class="row">
+        <div class="mx-2">
+            <p>Total</p>
+            <p><i class="fas fa-euro-sign" aria-hidden='True'>{{ total }}</i></p>
+            <a href="#" class="btn btn-primary" role='button'><i class="fas fa-check-circle"></i> Checkout</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
