@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    padding-top: 100px;
+    padding-top: 10px;
 }
 
 footer {
@@ -36,7 +36,7 @@ footer {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 150px;
+    width: 50%;
     height: 150px;
     margin: 0 auto;
 }

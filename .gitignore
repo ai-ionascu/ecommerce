@@ -3,3 +3,6 @@
 *.pyc
 .c9
 env.py
+*.png
+static/
+media/

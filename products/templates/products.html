@@ -2,7 +2,8 @@
 
 {% block page_content %}
 
-<div class="row">
+<div class="container-fluid">
+    <div class="row">
     {% for product in products %}
     
         <div class="col-10 offset-1 offset-sm-0 col-sm-6 col-md-4 card">
@@ -22,8 +23,8 @@
                 </form>
             </div>
         </div>
-    
+        
     {% endfor %}
+    </div>
 </div>
-
 {% endblock %}
