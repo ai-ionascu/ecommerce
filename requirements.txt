@@ -1,7 +1,7 @@
 chardet==3.0.4
 colorama==0.3.9
 dj-database-url==0.5.0
-Django==1.11
+Django==1.11.28
 django-forms-bootstrap==3.1.0
 docutils==0.14
 jmespath==0.9.4
