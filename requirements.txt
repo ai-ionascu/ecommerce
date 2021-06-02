@@ -13,7 +13,7 @@ requests~=2.22
 requests-unixsocket==0.1.5
 six==1.12.0
 stripe==2.33.0
-urllib3==1.25.3
+urllib3==1.26.5
 django-storages==1.7.1
 Pillow~=4.3.0
 gunicorn==19.7.1
